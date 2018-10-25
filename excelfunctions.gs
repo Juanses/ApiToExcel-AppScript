@@ -85,6 +85,11 @@ var ExcelClass = function(){
     this.cols = cols;
   }
   
+  this.setColsAuto = function (){
+    var columns = this.sheet.getRange(1, 1, 1, this.sheet.getLastColumn()).getValues()[0]; //read headers
+    this.cols = columns;
+  }
+  
   //*************** COLUMNS END ***************
   
   //*************** VALUES START ***************
